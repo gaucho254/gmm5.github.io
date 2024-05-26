@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>For My Love</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+       @keyframes roseAnimation {
+           0% {
+               background-position: 0% 50%;
+           }
+           50% {
+               background-position: 100% 50%;
+           }
+           100% {
+               background-position: 0% 50%;
+           }
+       }
+
+       body {
+           margin: 0;
+           font-family: 'Satisfy', cursive;
+           background-image: url('https://www.transparenttextures.com/patterns/rose-seamless.png');
+           background-size: 300px;
+           animation: roseAnimation 30s infinite linear;
+           display: flex;
+           flex-direction: column;
+           min-height: 100vh;
+       }
+
+       .header {
+           background-color: rgba(255, 192, 203, 1);
+           color: #8b0000;
+           padding: 20px;
+           text-align: center;
+           font-size: 2rem;
+           animation: hueRotation 10s infinite alternate;
+       }
+
+       @keyframes hueRotation {
+           0% {
+               filter: hue-rotate(0deg);
+           }
+           100% {
+               filter: hue-rotate(360deg);
+           }
+       }
+
+       .sidenav {
+           height: 100%;
+           width: 0;
+           position: fixed;
+           z-index: 1;
+           top: 0;
+           left: 0;
+           background-color: rgba(255, 182, 193, 0.9);
+           overflow-x: hidden;
+           padding-top: 60px;
+           transition: 0.5s;
+       }
+
+       .sidenav a {
+           padding: 8px 8px 8px 32px;
+           text-decoration: none;
+           font-size: 1.5rem;
+           color: #8b0000;
+           display: block;
+           transition: 0.3s;
+       }
+
+       .sidenav a:hover {
+           background-color: rgba(255, 20, 147, 0.8);
+           color: white;
+       }
+
+       .content {
+           padding: 20px;
+           flex: 1;
+           color: #8b0000;
+           font-size: 1.2rem;
+           text-align: center;
+       }
+
+       .footer {
+           background-color: rgba(255, 192, 203, 0.8);
+           color: #8b0000;
+           text-align: center;
+           padding: 10px;
+           font-size: 1.2rem;
+           animation: hueRotation 10s infinite alternate;
+       }
+
+       .toggle-btn {
+           font-size: 24px;
+           cursor: pointer;
+           margin-left: 20px;
+           color: #8b0000;
+       }
+   </style>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="header">
+       <h1>For My Sweetheart<br> Makabis</h1>
+       <span class="toggle-btn" onclick="toggleNav()">&#9776;</span>
+   </div>
+
+   <div id="mySidenav" class="sidenav">
+       <a href="#" onclick="showContent('home'); closeNav();">Home</a>
+       <a href="#" onclick="showContent('video'); closeNav();">Video</a>
+       <a href="#" onclick="showContent('images'); closeNav();">Images</a>
+       <a href="#" onclick="showContent('memories'); closeNav();">Memories</a><a href="#" onclick="showContent('audio'); closeNav();">audio</a>
+   </div>
+
+   <div class="content">
+       <div id="home">
+           <h2>My Dearest Love</h2>
+           <p> 
+            TESS
+            <br>This website is a small token of my love and appreciation for you. You have brought so much joy and happiness into my life, and words cannot express how deeply I cherish you.</p>
+       </div>
+
+       <div id="video" style="display: none;">
+           <h2>Our Precious Moments</h2>
+           <p>Here you can add our special videos that capture the beautiful memories we've made together.</p>
+         <video controls src="gmm34.mp4"style="width:100%; height:auto;"></video>
+         <video controls src="gmm35.mp4"style="width:100%; height:auto;"></video>
+         <video controls src="gmm36.mp4"style="width:100%; height:auto;"></video>
+         <video controls src="gmm37.mp4"style="width:100%; height:auto;"></video><!-- Add your video content here -->
+       </div>
+
+       <div id="images" style="display: none; width:100%; height:auto;">
+           <h2>Our Love in Pictures</h2>
+           <p>This section is dedicated to our cherished photographs, each one a testament to the love we share.</p>
+           <img src="gmm42.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm43.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm44.jpg"style="width:100%; height:auto;" alt="">
+           <img src="gmm45.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm46.jpg"style="width:100%; height:auto;" alt="">
+           <img src="gmm47.jpg" style="width:100%; height:auto;" style="width:100%; height:auto;"alt="">
+           <img src="gmm48.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm49.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm50.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm51.jpg"style="width:100%; height:auto;" alt="">
+           <img src="gmm52.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm53.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm54.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm55.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm56.jpg" style="width:100%; height:auto;"alt=""><!-- Add your image content here -->
+       </div>
+
+       <div id="memories" style="display: none;">
+           <h2>Our Unforgettable Moments</h2>
+           <p>Let's relive the precious moments and memories that have brought us closer together.</p>
+           <img src="gmm38.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm39.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm40.jpg" style="width:100%; height:auto;"alt="">
+           <img src="gmm41.jpg" style="width:100%; height:auto;"alt="">
+           <!-- Add your memory content here -->
+       </div>
+       <div id="audio" style="display:none;">
+           <h2>Our Precious songs ...mostly my dedication to you</h2
+           <audio controls src="marioo.m4a"></audio>
+           <audio controls>
+    <source src="marioo.m4a" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio></div>
+   </div>
+
+   <div class="footer">
+       <p>&copy; Forever Yours</p>
+   </div>
+
+   <script>
+       function toggleNav() {
+           var sidenav = document.getElementById("mySidenav");
+           if (sidenav.style.width === "200px") {
+               sidenav.style.width = "0";
+           } else {
+               sidenav.style.width = "200px";
+           }
+       }
+
+       function showContent(section) {
+           var contents = document.getElementsByClassName("content")[0].children;
+           for (var i = 0; i < contents.length; i++) {
+               contents[i].style.display = "none";
+           }
+           document.getElementById(section).style.display = "block";
+           closeNav();
+       }
+
+       function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+       }
+
+       document.addEventListener('click', function(event) {
+           var sidenav = document.getElementById("mySidenav");
+           var toggleButton = document.querySelector(".toggle-btn");
+           if (event.target !== sidenav && event.target !== toggleButton && sidenav.style.width === "200px") {
+               closeNav();
+           }
+       });
+   </script>
+</body>
+</html>
